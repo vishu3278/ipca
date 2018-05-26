@@ -61,6 +61,9 @@ body {
     font-weight: normal;
 }
 
+.logo { padding: 25px; text-align: center; }
+.logo  img { margin: 0 auto; display: block; max-width: 128px; }
+
 .container {
     margin: 0 auto;
     margin-top: 10px;
@@ -157,6 +160,7 @@ input[type="password"] {
     width: 100%;
     padding: 15px 0;
     color: #6d98b3;
+    background-color: #fff;
 }
 
 .loginbox input {
@@ -179,7 +183,8 @@ input[type="password"] {
     font-family: 'Roboto', sans-serif;
 }
 
-.loginbox input[type="submit"]:hover {
+.loginbox input[type="submit"]:hover,
+.loginbox button:hover {
     cursor: pointer;
     background: #9dc900;
     color: #000;
