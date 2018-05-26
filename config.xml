@@ -25,7 +25,7 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="permissions" value="none"/>
 
-    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="DisallowOverscroll" value="false"/>
     <preference name="BackgroundColor" value="0xff0000ff"/>
     <preference name="HideKeyboardFormAccessoryBar" value="true"/>
 
@@ -95,11 +95,11 @@
         <allow-intent href="market:*" />
         <preference name="Fullscreen" value="true" />
         <preference name="KeepRunning" value="false"/>
-        <preference name="LoadUrlTimeoutValue" value="10000"/>
+        <preference name="LoadUrlTimeoutValue" value="20000"/>
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         <preference name="LoadingDialog" value="Loading, Please wait..."/>
         <preference name="ErrorUrl" value="error.html"/>
-        <preference name="ShowTitle" value="true"/>
+        <preference name="ShowTitle" value="false"/>
         <preference name="LogLevel" value="VERBOSE"/>
         <preference name="AndroidLaunchMode" value="singleTop"/>
         <preference name="DefaultVolumeStream" value="call" />
