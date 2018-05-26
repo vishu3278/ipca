@@ -39,29 +39,32 @@
         <div class="container_body">
             <form>
                 <div class="input-group">
-                    <label for="Pickup Date">Pickup Date</label>
+                    <label >Pickup Date</label>
                     <div class="input-field">
-                        <input type="date" name="" placeholder="03 May 2018">
+                        <input type="date" name="" placeholder="30 June 2018">
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="Pickup Time"> Pickup Time</label>
+                    <label > Pickup Time</label>
                     <div class="input-field">
                         <input type="time" name="" placeholder="01:25 PM">
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="Upload Weight Slip">Upload Weight Slip</label>
+                    <label >Upload Weight Slip</label>
                     <div class="input-field with-icon">
                         <i class="icon flaticon-photo-camera" aria-hidden="true"></i>
                         <input type="file" name="upload" id="upload">
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="Garbage:">Garbage</label>
+                    <label >Garbage</label>
                     <div class="input-field">
-                        <input type="text" name="" placeholder="">
+                        <input type="number" name="kg" placeholder="kg">
                     </div>
+                </div>
+                <div class="loginbox">
+                    <button type="button" name="submit" v-on:click="submitScrap();">Submit</button>
                 </div>
             </form>
         </div>
