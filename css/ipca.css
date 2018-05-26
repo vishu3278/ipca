@@ -10,6 +10,7 @@ body {
 .wrapper {
     min-height: 100%;
     position: relative;
+    background: #fff;
 }
 
 .header {
@@ -131,7 +132,6 @@ body {
 .footer ul li a {
     color: #fff;
     font-size: 32px;
-    padding-right: 20px;
 }
 
 .footer li:hover {
