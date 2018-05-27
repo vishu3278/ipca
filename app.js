@@ -53,8 +53,7 @@ var app2 = new Vue({
 		    destinationType: Camera.DestinationType.FILE_URI });
 
 			function onSuccess(imageURI) {
-			    var image = document.getElementById('myImage');
-			    image.src = imageURI;
+			    this.img = imageURI;
 			}
 
 			function onFail(message) {
