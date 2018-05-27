@@ -30,6 +30,39 @@ var myapp = new Vue ({
 				}
 			}
 			
+		},
+		submitScrap:function() {
+			alert();
+		}
+	}
+})
+
+
+var app2 = new Vue({
+	el:"#detail",
+	data:{
+		title:"Scrap Details",
+		date:{},
+		time:"",
+		img:"",
+		weight:""
+	},
+	methods:{
+		takePhoto:function() {
+			navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+		    destinationType: Camera.DestinationType.FILE_URI });
+
+			function onSuccess(imageURI) {
+			    var image = document.getElementById('myImage');
+			    image.src = imageURI;
+			}
+
+			function onFail(message) {
+			    alert('Failed because: ' + message);
+			}
+		},
+		submitScrap:function() {
+			alert(this.date + this.time + this.img + this.weight);
 		}
 	}
 })
