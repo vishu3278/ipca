@@ -9,14 +9,17 @@
     <link rel="stylesheet" type="text/css" href="font/flaticon.css">
     <link rel="stylesheet" type="text/css" href="css/ipca.css">
     <script type="text/javascript">
-        document.addEventListener("deviceready", onDeviceReady, false);
+        function domload() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+            
+        }
         function onDeviceReady() {
             alert("device ready");
         }
     </script>
 </head>
 
-<body >
+<body onload="domload()">
     <div id="app" class="wrapper">
         <div class="header">
             <div class="left">
