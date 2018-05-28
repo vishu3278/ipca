@@ -37,6 +37,9 @@ var myapp = new Vue ({
 	}
 })
 
+function onDeviceReady() {
+    console.log(navigator.camera);
+}
 
 var app2 = new Vue({
 	el:"#detail",
