@@ -38,9 +38,22 @@ var myapp = new Vue ({
 })
 
 function onDeviceReady() {
-    console.log(navigator.camera);
+    alert("device ready");
+
 }
 
+function capture() {
+	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI });
+}
+
+function onSuccess(imageURI) {
+    app2.img = imageURI;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
 var app2 = new Vue({
 	el:"#detail",
 	data:{
@@ -51,18 +64,6 @@ var app2 = new Vue({
 		weight:""
 	},
 	methods:{
-		takePhoto:function() {
-			navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-		    destinationType: Camera.DestinationType.FILE_URI });
-
-			function onSuccess(imageURI) {
-			    this.img = imageURI;
-			}
-
-			function onFail(message) {
-			    alert('Failed because: ' + message);
-			}
-		},
 		submitScrap:function() {
 			alert(this.date + this.time + this.img + this.weight);
 		}
