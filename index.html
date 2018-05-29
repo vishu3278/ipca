@@ -30,15 +30,15 @@
             </div> -->
             <h2>{{title}}</h2>
         </div>
-        <div class="logo"><img src="icon.jpg" alt="logo"></div>
+        <div class="logo"><img src="icon.png" alt="logo"></div>
         <div class="loginbox">
             <form>
                 <p style="text-align: center;">{{date}}</p>
-                <input type="text" name="" v-model="user" placeholder="Email Address/ Mobile No.">
-                
+                <input type="text" name="" v-model="user" required="" placeholder="Email Address/ Mobile No.">
                 <br>
-                <input type="password" name="" v-model="pass" placeholder="Enter Password">
+                <input type="password" name="" v-model="pass" required="" placeholder="Enter Password">
                 {{user}}, {{pass}}
+                <div v-if="alertmsg">{{alertmsg}}</div>
                 <br>
                 <p style="text-align: right;">
                     <a href="forget.html">Forgot your password?</a>

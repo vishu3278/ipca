@@ -8,7 +8,8 @@ var myapp = new Vue ({
 			{id:"9599710275", pass:"123456"}
 		],
 		user:"",
-		pass:""
+		pass:"",
+		alertmsg:""
 	},
 	methods: {
 		login: function() {
@@ -21,18 +22,27 @@ var myapp = new Vue ({
 				.catch(e=>{alert(e)});*/
 			// console.log(this.users);
 
-			for (var i = 0; i < this.users.length; i++) {
-				console.log(this.users[i].pass);
-				if (this.user == this.users[i].id && this.pass == this.users[i].pass) {
-					window.location.assign("scrap_detail.html");
-				} else {
-					console.log("Error!");
+			if (this.user == "" || this.pass == "") {
+				this.alertmsg = "Enter all fields";
+				this.removeAlert();
+			} else {
+				for (var i = 0; i < this.users.length; i++) {
+					// console.log(this.users[i].pass);
+					if (this.user == this.users[i].id && this.pass == this.users[i].pass) {
+						window.location.assign("scrap_detail.html");
+					} else {
+						this.alertmsg = "Error! User and/or password does not match.";
+						this.removeAlert();
+					}
 				}
 			}
 			
 		},
 		submitScrap:function() {
 			alert();
+		},
+		removeAlert:function () {
+			setTimeout(()=>{this.alertmsg = ''},4000);
 		}
 	}
 })
