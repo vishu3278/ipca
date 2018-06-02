@@ -8,21 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="font/flaticon.css">
     <link rel="stylesheet" type="text/css" href="css/ipca.css">
-    <script type="text/javascript">
-
-        function capture() {
-            navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-            destinationType: Camera.DestinationType.FILE_URI });
-        }
-
-        function onSuccess(imageURI) {
-            app2.img = imageURI;
-        }
-
-        function onFail(message) {
-            alert('Failed because: ' + message);
-        }
-    </script>
+    <script type="text/javascript" src="features.js"></script>
 </head>
 
 <body>
