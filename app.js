@@ -38,9 +38,6 @@ var myapp = new Vue ({
 			}
 			
 		},
-		submitScrap:function() {
-			alert();
-		},
 		removeAlert:function () {
 			setTimeout(()=>{this.alertmsg = ''},4000);
 		}
@@ -60,6 +57,19 @@ var app2 = new Vue({
 	methods:{
 		submitScrap:function() {
 			alert(this.date + this.time + this.img + this.weight);
-		}
+		},
+		capture: function () {
+			
+	        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+	        destinationType: Camera.DestinationType.FILE_URI });
+
+		    function onSuccess(imageURI) {
+		        this.img = imageURI;
+		    }
+
+		    function onFail(message) {
+		        alert('Failed because: ' + message);
+		    }
+		},
 	}
 })
