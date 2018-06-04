@@ -59,7 +59,7 @@ var app2 = new Vue({
 			alert(this.date + this.time + this.img + this.weight);
 		},
 		capture: function () {
-			
+			console.log("Capture initiated");
 	        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
 	        destinationType: Camera.DestinationType.FILE_URI });
 
